@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import '../style.css';
 
 class Book extends React.Component {
   constructor(props) {
@@ -14,23 +15,23 @@ class Book extends React.Component {
     const { title, author } = this.props;
     return (
       <div className="container my-3 px-5 border border-opacity-10 border-dark rounded-1 bg-light d-flex justify-content-between align-items-center flex-fill">
-        <div style={{ width: '30%' }}>
+        <div className="bookInfo">
           <div className="py-3">
             <span className="text-muted">Action</span>
             <h3 className="fw-bold">{title}</h3>
-            <span className="" style={{ color: '#5aa8ee' }}>{author}</span>
+            <span className="author">{author}</span>
           </div>
           <div>
             <ul className="list-unstyled">
-              <li className="list-inline-item" style={{ color: '#5aa8ee' }}>Comments</li>
+              <li className="list-inline-item action">Comments</li>
               <li className="list-inline-item text-muted">|</li>
-              <li className="list-inline-item" style={{ color: '#5aa8ee' }}>Remove</li>
+              <li className="list-inline-item action">Remove</li>
               <li className="list-inline-item text-muted">|</li>
-              <li className="list-inline-item" style={{ color: '#5aa8ee' }}>Edit</li>
+              <li className="list-inline-item action">Edit</li>
             </ul>
           </div>
         </div>
-        <div style={{ width: 180, height: 180 }} className="align-items-center d-flex gap-2">
+        <div className="align-items-center progressBar d-flex gap-2">
           <div>
             <CircularProgressbar value={this.value} maxValue={1} styles={{ path: { stroke: 'rgb(2,144,255)' } }} />
           </div>
@@ -45,7 +46,7 @@ class Book extends React.Component {
             <p>Chapter 17</p>
           </div>
           <div>
-            <button className="btn fw-lighter text-white" style={{ backgroundColor: '#0290FF' }} type="button">UPDATE PROGRESS</button>
+            <button className="btn fw-lighter updateProgress text-white" type="button">UPDATE PROGRESS</button>
           </div>
         </div>
       </div>

@@ -1,3 +1,46 @@
+.bookInput {
+  width: 38rem;
+  height: 2.5rem;
+  outline: none;
+}
+
 .bookInput:focus {
   outline: none;
+}
+
+.author,
+.action {
+  color: #5aa8ee;
+}
+
+.bookInfo {
+  width: 30%;
+}
+
+.progressBar {
+  width: 180px;
+  height: 180px;
+}
+
+.updateProgress,
+.add-book {
+  background-color: #0290ff;
+}
+
+.web-title {
+  color: #0290ff;
+}
+
+.account-icon {
+  color: #0290ff;
+  height: 30px;
+  width: 30px;
+}
+
+.gray-bar {
+  height: 3px;
+}
+
+.categories {
+  width: 15rem;
 }
