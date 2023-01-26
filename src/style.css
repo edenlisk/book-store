@@ -23,7 +23,8 @@
 }
 
 .updateProgress,
-.add-book {
+.add-book,
+.check-progress {
   background-color: #0290ff;
 }
 
@@ -43,4 +44,8 @@
 
 .categories {
   width: 15rem;
+}
+
+.check-progress:focus {
+  background-color: #0290ff;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import BookList from './components/BookList';
+import Categories from './components/Categories';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<BookList />} />
-          <Route path="/categories" />
+          <Route path="/categories" element={<Categories />} />
         </Routes>
       </Router>
     </div>
