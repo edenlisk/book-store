@@ -1,17 +1,14 @@
 import { createAction } from '@reduxjs/toolkit/src/createAction';
+import { createReducer } from "@reduxjs/toolkit/src/createReducer";
 
+export const CHECK_STATUS = createAction('bookstore/categories/CHECK_STATUS');
 const INITIAL_STATE = [];
 
-const categoriesReducer = (state = INITIAL_STATE, actions) => {
-  if (actions.type === 'COMPLETED') {
-    return 'Under Construction';
-  } if (actions.type === 'IN_PROGRESS') {
-    return 'Under Construction';
-  }
-  return state;
-};
+const categoriesReducer = createReducer(INITIAL_STATE, (builder => {
+  builder
+      .addCase(CHECK_STATUS,() => 'Under Construction')
+      .addDefaultCase(state => state);
+}))
 
-export const completed = createAction('COMPLETED');
-export const progress = createAction('IN_PROGRESS');
 
 export default categoriesReducer;
