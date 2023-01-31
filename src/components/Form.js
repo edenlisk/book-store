@@ -5,10 +5,15 @@ const Form = () => (
   <div className="container py-3">
     <hr className="gray-bar" />
     <h3 className="text-muted ps-3">ADD NEW BOOK</h3>
-    <form className="container d-flex gap-5">
+    <form className="container d-flex gap-5 align-items-center">
       <input
         type="text"
         placeholder="Book title"
+        className="fs-5 bookInput border border-2 border-opacity-10"
+      />
+      <input
+        type="text"
+        placeholder="Book author"
         className="fs-5 bookInput border border-2 border-opacity-10"
       />
       <div className="d-flex gap-3 align-items-center">
