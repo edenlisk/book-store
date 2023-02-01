@@ -1,5 +1,4 @@
-import { createAction } from '@reduxjs/toolkit/src/createAction';
-import { createReducer } from '@reduxjs/toolkit/src/createReducer';
+import { createAction, createReducer } from '@reduxjs/toolkit';
 
 const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 const INITIAL_STATE = [];
