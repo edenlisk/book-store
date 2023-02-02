@@ -28,6 +28,10 @@
   background-color: #0290ff;
 }
 
+.add-book {
+  width: 7rem;
+}
+
 .web-title {
   color: #0290ff;
 }
@@ -46,6 +50,17 @@
   width: 15rem;
 }
 
-.check-progress:focus {
+.check-progress:focus,
+.updateProgress:focus {
   background-color: #0290ff;
+}
+
+.updateProgress:hover,
+.add-book:hover,
+.check-progress:hover {
+  background-color: #0290ff;
+}
+
+.arrow {
+  height: 8rem;
 }
