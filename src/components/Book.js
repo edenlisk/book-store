@@ -8,12 +8,13 @@ import { removeBook } from '../redux/book/book';
 
 const Book = (props) => {
   const dispatch = useDispatch();
-  const handleRemove = (book) => {
-    dispatch(removeBook(book));
-  };
   const {
-    title, author, category, progress,
+    id, title, author, category, progress,
   } = props;
+  const handleRemove = () => {
+    dispatch(removeBook(id));
+  };
+
   return (
     <div className="container my-3 px-5 border border-opacity-10 border-dark rounded-1 bg-light d-flex justify-content-between align-items-center flex-fill">
       <div className="bookInfo">
@@ -62,6 +63,7 @@ Book.propTypes = {
   author: PropTypes.string.isRequired,
   progress: PropTypes.number.isRequired,
   category: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Book;
