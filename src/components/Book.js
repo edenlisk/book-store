@@ -27,7 +27,7 @@ const Book = (props) => {
           <ul className="list-unstyled">
             <li className="list-inline-item"><button type="button" className="action border-0 bg-light">Comment</button></li>
             <li className="list-inline-item text-muted">|</li>
-            <li className="list-inline-item"><button type="button" onClick={() => handleRemove(props)} className="action border-0 bg-light">Remove</button></li>
+            <li className="list-inline-item"><button type="button" onClick={() => handleRemove()} className="action border-0 bg-light">Remove</button></li>
             <li className="list-inline-item text-muted">|</li>
             <li className="list-inline-item"><button type="button" className="action border-0 bg-light">Edit</button></li>
           </ul>
@@ -45,6 +45,7 @@ const Book = (props) => {
           <p className="text-muted">Completed</p>
         </div>
       </div>
+      <div className="border border-1 arrow" />
       <div>
         <div>
           <span className="text-muted fw-lighter">CURRENT CHAPTER</span>
