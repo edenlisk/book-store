@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-import { addBook } from '../redux/book/book';
+import { createBook } from '../redux/book/book';
 import '../style.css';
 
 const Form = () => {
@@ -20,7 +20,7 @@ const Form = () => {
       const book = {
         id: nanoid(), title, author, category, progress: 0,
       };
-      dispatch(addBook(book));
+      dispatch(createBook(book));
     }
     bookAuthor.current.value = '';
     bookTitle.current.value = '';
